@@ -1,0 +1,20 @@
+假设自己的流A a文件  提交的流B a文件
+
+1.准备工作 
+	备份自己流的文件Aa 
+	备份已经合成的文件c
+	复制冲突所在的的路径 例如 ./cs/cs-supports/src/main/java/com/ins/pos/cs/offline/impl/CsApplyServiceImpl.java
+	记得前面加./
+2.自己流上切换B流上的文件Ba
+	命令 比如git checkout origin/uat  ./cs/cs-supports/src/main/java/com/ins/pos/cs/offline/impl/CsApplyServiceImpl.java
+3.A流提交Ba文件 并合成B流上合
+	git pull更新
+4.合成的文件c 修改最终所需要的 
+	提交
+	再次提交往B流上合（保证uat上原来的代码完整 ）
+	继续git pull更新
+5.自己流的文件Aa复制回来 
+	提交 
+	再次提交往B流上合（保证自己流的不会出现其他流的代码）
+	再次更新 
+	
