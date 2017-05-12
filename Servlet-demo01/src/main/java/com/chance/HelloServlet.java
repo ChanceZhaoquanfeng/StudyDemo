@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * servletDemo 
- * 
+ * 重写doget dopost方法
  * @author chance
  *
  */
@@ -25,7 +25,10 @@ public class HelloServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);// 调用doGet()
 	}
-
+	/**
+	 * HttpServletRequest 网页发过来的请求
+	 * HttpServletResponse 返回给网页的响应
+	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 设置输出格式，解决中文乱码问题
 		response.setContentType("text/html; charset=utf-8");
