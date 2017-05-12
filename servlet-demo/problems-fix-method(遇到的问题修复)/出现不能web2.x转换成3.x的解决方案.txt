@@ -1,0 +1,15 @@
+
+1.把自己的web.xml备份
+
+2.把下面的web.xml copy进去开始maven update  选force 强制更新
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>
+
+3.替换成原来的 web.xml即可
+
+备注：我也不知道这样为啥成功 有大神了 麻烦给我指点一二 或者推荐一些书 不甚感激
