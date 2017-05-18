@@ -5,14 +5,46 @@
 	<!-- 配置一个servlet程序 -->
 	<servlet>
 		<!-- servlet的内部名称 ，可以自定义 -->
-		<servlet-name>HelloServlet</servlet-name>
+		<servlet-name>RequestDemo3</servlet-name>
 		<!-- servlet类名： 包名+简单类名 -->
-		<servlet-class>com.chance.HelloServlet</servlet-class>
+		<servlet-class>com.chance.LifeDemo</servlet-class>
+		<!-- 让servlet对象自动加载 注意： 整数值越大，创建优先级越低！-->  
+    <load-on-startup>1</load-on-startup> 
 	</servlet>
 	<servlet-mapping>
 		<!-- servlet的内部名称，和上面的名称保持一致！！！ -->
-		<servlet-name>HelloServlet</servlet-name>
+		<servlet-name>RequestDemo3</servlet-name>
 		<!-- servlet的访问名称： /名称 -->
-		<url-pattern>/hello</url-pattern>
+		<url-pattern>/RequestDemo3</url-pattern>
+	</servlet-mapping>
+	<!-- 登录  -->
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.chance.login.LoginServlet</servlet-class>
+    <load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 主页  -->
+	<servlet>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>com.chance.login.IndexServlet</servlet-class>
+    <load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/IndexServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 安全退出  -->
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.chance.login.LogoutServlet</servlet-class>
+    <load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
 	</servlet-mapping>
 </web-app>
